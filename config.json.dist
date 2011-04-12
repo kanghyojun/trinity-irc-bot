@@ -1,0 +1,6 @@
+{
+  "server": "irc.ozinger.org",
+  "nick": "trinity",
+  "port": 8080,
+  "channels": ["#trinity"]
+}
