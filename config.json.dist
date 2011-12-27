@@ -1,6 +1,6 @@
 {
-  "server": "irc.ozinger.org",
-  "nick": "trinity",
+  "server": "your irc server",
+  "nick": "your nick",
   "port": 8080,
-  "channels": ["#trinity"]
+  "channels": { "channels": ["#channel"]}
 }
