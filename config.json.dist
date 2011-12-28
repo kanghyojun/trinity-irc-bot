@@ -2,5 +2,9 @@
   "server": "your irc server",
   "nick": "your nick",
   "port": 8080,
-  "options": { "channels": ["#channel"], "debug": false}
+  "options": { 
+    "channels": ["#channel"], 
+    "debug": false, 
+    "userName": "trinity-bot"
+  }
 }
