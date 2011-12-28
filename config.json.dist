@@ -2,5 +2,5 @@
   "server": "your irc server",
   "nick": "your nick",
   "port": 8080,
-  "channels": { "channels": ["#channel"]}
+  "options": { "channels": ["#channel"], "debug": false}
 }
