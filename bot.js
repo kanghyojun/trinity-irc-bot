@@ -1,7 +1,10 @@
-var fs = require('fs'),
-    irc = require('irc'),
+var fs = require('fs');
 
-fs.readFile('./config.json', function (err, data) {
-  var config = JSON.parse(data);
-});
+var irc = require('irc');
+t 
+var config = (function() {
+  var data = fs.readFileSync('./config.json');
+  return JSON.parse(data);
+})();
 
+var bot = new irc.Client(config.server, config.nick, config.options);
