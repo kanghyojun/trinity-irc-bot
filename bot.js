@@ -4,10 +4,7 @@ var irc = require('irc');
 
 var env = require('./env');
 
-var config = (function() {
-  var data = fs.readFileSync('./config.json');
-  return JSON.parse(data);
-})();
+var config = JSON.parse(fs.readFileSync('./config.json'));
 
 var bot = new irc.Client(config.server, config.nick, config.options);
 
