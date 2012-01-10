@@ -1,3 +1,3 @@
 module.exports = {
-  'command': ['script',]
+  'command': ['script', 'set', 'get', 'help']
 }

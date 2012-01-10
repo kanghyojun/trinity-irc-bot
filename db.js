@@ -26,7 +26,12 @@ var model = {
     this.openAgenda(function(db, collection){
       collection.find({}, {'sort': [['num', 'desc']]}, function(err, cursor) {
         cursor.toArray(function(err, agendas) {
-          callback(agendas[0].num);
+          if(agendas[0] == null) {
+            num = 1;
+          } else {
+            num = agendas[0].num;
+          }
+          callback(num);
           db.close();
         });
       });
@@ -35,8 +40,8 @@ var model = {
   getAgenda: function(n, callback) {
     this.openAgenda(function(db, collection) {
       collection.findOne({num:n}, function(err, agenda) {
-          callback(agenda);
-          db.close();
+        callback(agenda);
+        db.close();
       });
     });
   },
