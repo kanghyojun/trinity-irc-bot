@@ -17,7 +17,8 @@ bot.addListener('message', function(from, to, message) {
       }
 
     } else {
-      this.say(to, '니가 뭔소리하는지 모르겠당께.');
+      this.say(to, '?');
+      this.say(to, '너 지금 내가 javascript로 만들어졌다고 무시하냐? 씨풋');
     }
   }
 });
