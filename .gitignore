@@ -2,3 +2,4 @@ config.json
 *.swp
 .DS_STORE
 *.db
+*.swo
