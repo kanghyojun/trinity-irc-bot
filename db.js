@@ -27,7 +27,7 @@ var model = {
       collection.find({}, {'sort': [['num', 'desc']]}, function(err, cursor) {
         cursor.toArray(function(err, agendas) {
           if(agendas[0] == null) {
-            num = 1;
+            num = 0;
           } else {
             num = agendas[0].num;
           }
@@ -42,6 +42,16 @@ var model = {
       collection.findOne({num:n}, function(err, agenda) {
         callback(agenda);
         db.close();
+      });
+    });
+  },
+  getAgendas: function(callback) {
+    this.openAgenda(function(db, collection) {
+      collection.find(function(err, cursor) {
+        cursor.each(function(err, agenda) {
+          callback(agenda);
+          db.close();
+        });
       });
     });
   },

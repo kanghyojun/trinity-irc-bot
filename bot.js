@@ -34,7 +34,7 @@ bot.addListener('message', function(from, to, message) {
           db.getLastNumber(function(num) {
             bot.say(to, (num + 1).toString() + '번 agenda로 등록됨');
           });
-        }
+        }       
       } else if(token[1] == 'get') {
         if(token[2] == 'agenda') {
           db.getAgenda(parseInt(token[3]), function(agenda) {
@@ -42,7 +42,17 @@ bot.addListener('message', function(from, to, message) {
             bot.say(to, '---------------');
             bot.say(to, agenda.content);
           });
+        } else if(token[2] == 'agendaList') {
+          bot.say(to, 'Agenda list');
+          bot.say(to, '---------------');
+
+          db.getAgendas(function(agenda) {
+            if(agenda != null) {
+              bot.say(to, agenda.num.toString() + '. ' + agenda.title); 
+            }
+          });
         }
+
       }     
     } else {
       this.say(to, '?');
