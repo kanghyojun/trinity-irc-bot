@@ -21,8 +21,6 @@ Then, you can start bot with nodejs.
 # Developer 
 
  - Hyojun, Kang admire9 (at) gmail.com
- - Jaesol, Pyeon kndantes (at) gmail.com
- - Yeonjoon, Lim yjroot (at) gmail.com
 
 [node-irc]: https://github.com/martynsmith/node-irc
 [npm]:http://npmjs.org/
